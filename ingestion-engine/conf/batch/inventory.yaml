@@ -3,14 +3,14 @@ domain: logistica
 mode: batch
 
 source:
-  path: abfss://landing@<STACC>.dfs.core.windows.net/logistica/inventory
+  path: abfss://landing@strgfarmialakehouse.dfs.core.windows.net/logistica/inventory
 
 target:
-  path: abfss://bronze@<STACC>.dfs.core.windows.net/logistica/inventory
-  checkpoint: abfss://checkpoints@<STACC>.dfs.core.windows.net/batch/logistica/inventory
+  path: abfss://bronze@strgfarmialakehouse.dfs.core.windows.net/logistica/inventory
+  checkpoint: abfss://checkpoints@strgfarmialakehouse.dfs.core.windows.net/batch/logistica/inventory
   partitionBy: ["load_date"]
 
 autoloader:
   cloudFiles.format: csv
   cloudFiles.inferColumnTypes: true
-  cloudFiles.schemaLocation: abfss://checkpoints@<STACC>.dfs.core.windows.net/schemas/logistica/inventory
+  cloudFiles.schemaLocation: abfss://checkpoints@strgfarmialakehouse.dfs.core.windows.net/schemas/logistica/inventory

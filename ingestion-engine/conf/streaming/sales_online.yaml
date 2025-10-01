@@ -8,8 +8,8 @@ kafka:
   startingOffsets: latest
 
 target:
-  path: abfss://bronze@<STACC>.dfs.core.windows.net/ventas/sales_online
-  checkpoint: abfss://checkpoints@<STACC>.dfs.core.windows.net/streaming/ventas/sales_online
+  path: abfss://bronze@strgfarmialakehouse.dfs.core.windows.net/ventas/sales_online
+  checkpoint: abfss://checkpoints@strgfarmialakehouse.dfs.core.windows.net/streaming/ventas/sales_online
   partitionBy: ["event_date"]
 
 format:
